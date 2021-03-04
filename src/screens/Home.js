@@ -83,7 +83,9 @@ const Home = (props) => {
           }}
           resizeMode="cover"
         />
+        <TouchableOpacity onPress = {()=> props.navigation.navigate('ProductDetailsById')}>
         <Text style={styles.textGender}>Woman</Text>
+        </TouchableOpacity>
       </View>
     </Container>
   );

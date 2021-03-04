@@ -52,7 +52,7 @@ const Address = (props) => {
       <TouchableOpacity
         style={[styles.card]}
         onPress={() => {
-          props.navigation.navigate('MovieByName', {
+          props.navigation.navigate('Payment', {
             name: item.name,
             image: item.imageUri,
           });
