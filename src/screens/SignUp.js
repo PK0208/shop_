@@ -120,7 +120,7 @@ const SignUp = (props) => {
             <CheckBox onChange={() => console.log('checkbox')} />
           </View>
           <View>
-            <Text numberOfLines={3}>
+            <Text numberOfLines={3} style={{fontFamily: 'arial-corsivo'}}>
               By REGISTERING YOU AGREE TO OUR TEMS OF SERVICE & PRIVACY POLICY
             </Text>
           </View>

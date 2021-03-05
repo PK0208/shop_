@@ -40,59 +40,105 @@ const ProductList = (props) => {
 
   useEffect(() => {
     //console.log('Height & Width', height, width);
+    console.log('Product List');
   }, [props, isFocused]);
 
   return (
-    <Container>
-      <Poster source={require('../assests/images/woman1.jpg')}></Poster>
-
-      <Text
+    <View style={{flex: 1}}>
+      <View
         style={{
-          marginLeft: 20,
-          marginTop: 22,
-          fontFamily: 'arial-bold',
-          color: '#363535',
+          flexDirection: 'row',
+          marginTop: 73,
+          borderWidth: 1,
+          borderColor: '#00000029',
+          //elevation: 1,
+          width: width * 0.92,
+          marginLeft: 15,
+          paddingVertical: 5,
+          shadowColor: '#00000029',
+          shadowRadius: 10,
+          shadowOpacity: 1,
+          shadowOffset: {width: 0, height: 3},
         }}>
-        Pink full hand T-shirts T-shirts{' '}
-      </Text>
-      <Text style={{marginLeft: 20, marginTop: 5, color: '#505050'}}>
-        ₹2999{' '}
-      </Text>
-
-      <View style={{flexDirection: 'row'}}>
-        <TouchableHighlight
-          style={[styles.buttonContainer, styles.sendButton]}
-          onPress={() => console.log('Login')}>
-          <Text style={styles.buttonText}>Add to bag</Text>
-        </TouchableHighlight>
-
-        <AntIcon
-          name="sharealt"
-          color="black"
-          size={25}
-          onPress={() => console.log('SHare')}
+        <Image
+          source={{
+            uri:
+              'https://images.pexels.com/photos/1858488/pexels-photo-1858488.jpeg?cs=srgb&dl=pexels-jaysen-scott-1858488.jpg&fm=jpg',
+          }}
+          style={{
+            marginLeft: (width * 0.096) / 2,
+            width: width * 0.26133333333,
+            height: height * 0.09774964838 * 2,
+            borderRadius: 8,
+          }}
+          resizeMode={'contain'}
         />
+        <View
+          style={{
+            flexDirection: 'column',
+          }}>
+          <Text
+            style={{
+              marginLeft: 10,
+              marginTop: 22,
+              fontFamily: 'arial-bold',
+              color: '#363535',
+              fontSize: 16,
+            }}
+            numberOfLines={1}>
+            Pink full hand T-shirts T-shirts{' '}
+          </Text>
+          <Text style={{marginLeft: 10, marginTop: 5, color: '#505050'}}>
+            ₹2999{' '}
+          </Text>
+          <Text style={{marginLeft: 10, marginTop: 5, color: '#505050'}}>
+            Size: S
+          </Text>
+          <Text style={{marginLeft: 10, marginTop: 5, color: '#505050'}}>
+            Qty: 1
+          </Text>
 
-        <AntIcon
-          name="hearto"
-          color="black"
-          size={25}
-          onPress={() => console.log('Heaert')}
-        />
+          <View
+            style={{
+              borderWidth: 1,
+              borderColor: '#707070',
+              justifyContent: 'flex-end',
+              marginLeft: 93,
+              width: width * 0.25866666666,
+              alignItems: 'center',
+              borderRadius: 5,
+            }}>
+            <TouchableOpacity onPress={() => console.log('Edit Pressed')}>
+              <Text style={{margin: 5, color: '#5E5E5E'}}>Add to Wishlist</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
-      <Text
-        style={{
-          marginLeft: 20,
-          marginTop: 2,
-          fontFamily: 'Arial regular',
-          color: '#363535',
-          fontSize: 12,
-        }}>
-        Black solid knitted sheath dress, has a V-neck, three-quarter sleeves,
-        and straight hem Black solid knitted sheath dress, has a V-neck,
-        three-quarter sleeves, and straight hem
-      </Text>
-    </Container>
+      <View style={styles.bottomView}>
+        <View style={{flexDirection: 'row'}}>
+          <View style={{flexDirection: 'column', justifyContent: 'flex-start'}}>
+            <Text>Total : ₹2999</Text>
+            <Text>INCLUDING GST</Text>
+          </View>
+          <View
+            style={{
+              borderWidth: 1,
+              //borderColor: '#707070',
+              //justifyContent: 'flex-end',
+              marginLeft: 93,
+              width: width * 0.272,
+              alignItems: 'center',
+              borderRadius: 5,
+              backgroundColor: '#313030',
+            }}>
+            <TouchableOpacity
+              onPress={() => props.navigation.navigate('Shipment')}>
+              <Text style={{margin: 5, color: '#FEFDF7'}}>Buy</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </View>
+    </View>
   );
 };
 
@@ -131,6 +177,22 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     fontFamily: 'arial-bold',
+  },
+  bottomView: {
+    borderTopWidth: 1,
+    width: '80%',
+    height: 50,
+    //backgroundColor: '#EE5407',
+    //justifyContent: 'center',
+    //alignItems: 'center',
+    position: 'absolute', //Here is the trick
+    bottom: 0, //Here is the trick
+    marginLeft: 35.7,
+    padding: 5,
+  },
+  textStyle: {
+    color: '#fff',
+    fontSize: 18,
   },
 });
 export default ProductList;

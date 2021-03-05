@@ -150,7 +150,7 @@ const Address = (props) => {
 
       <TouchableHighlight
         style={[styles.buttonContainer, styles.sendButton]}
-        onPress={() => console.log('Add Address')}>
+        onPress={() => props.navigation.navigate('Payment')}>
         <Text style={styles.buttonText} numberOfLines={1}>
           Add New Address
         </Text>

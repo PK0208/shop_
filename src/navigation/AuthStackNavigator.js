@@ -23,6 +23,7 @@ import Address from '../screens/Address';
 import Payment from '../screens/Payment';
 import ProductDetailsById from '../screens/ProductDetailsById';
 import ProductList from '../screens/ProductList';
+import ShopForWomen from '../screens/ShopForWomen';
 
 const AuthStack = createStackNavigator();
 
@@ -42,6 +43,7 @@ const AuthStackNavigator = () => {
           component={ProductDetailsById}
         />
         <AuthStack.Screen name={'ProductList'} component={ProductList} />
+        <AuthStack.Screen name={'ShopForWomen'} component={ShopForWomen} />
         {/* <AuthStack.Screen name={'Login'} component={Login} />
         <AuthStack.Screen name={'SignUp'} component={SignUp} />
         <AuthStack.Screen name={'SignUp'} component={SignUp} />
