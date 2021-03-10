@@ -149,7 +149,12 @@ const ProductDetailsById = (props) => {
 
   return (
     <Container>
-      <Poster source={require('../assests/images/woman1.jpg')}></Poster>
+      <Poster
+        //source={require('../assests/images/woman1.jpg')}
+        source={{
+          uri:
+            'https://images.pexels.com/photos/965324/pexels-photo-965324.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+        }}></Poster>
 
       <Text
         style={{

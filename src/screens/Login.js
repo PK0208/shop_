@@ -49,7 +49,9 @@ const Login = (props) => {
 
   } */
 
-  useEffect(() => {}, [props, isFocused]);
+  useEffect(() => {
+    console.log('Login UseEffect');
+  }, [props, isFocused]);
 
   const onPressBackHandler = async () => {
     console.log('onPressBackHandler');
@@ -106,7 +108,7 @@ const Login = (props) => {
         </View>
         <TouchableHighlight
           style={[styles.buttonContainer, styles.sendButton]}
-          onPress={() => console.log('Login')}>
+          onPress={() => props.navigation.navigate('Home')}>
           <Text style={styles.buttonText}>LOG IN</Text>
         </TouchableHighlight>
 

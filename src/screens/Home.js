@@ -36,6 +36,11 @@ const Home = (props) => {
     //console.log('Height & Width', height, width);
   }, [props, isFocused]);
 
+  const onPressBackHandler = async () => {
+    console.log('onPressBackHandler');
+    props.navigation.goBack();
+  };
+
   return (
     <Container>
       <View style={{flexDirection: 'row', justifyContent: 'space-around'}}>

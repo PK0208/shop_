@@ -54,6 +54,7 @@ const SignUp = (props) => {
 
   const onPressBackHandler = async () => {
     console.log('onPressBackHandler');
+    props.navigation.goBack();
   };
 
   return (

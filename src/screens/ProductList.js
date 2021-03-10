@@ -49,7 +49,7 @@ const ProductList = (props) => {
         style={{
           flexDirection: 'row',
           marginTop: 73,
-          borderWidth: 1,
+          borderWidth: 1 / 2,
           borderColor: '#00000029',
           //elevation: 1,
           width: width * 0.92,
@@ -86,15 +86,27 @@ const ProductList = (props) => {
               fontSize: 16,
             }}
             numberOfLines={1}>
-            Pink full hand T-shirts T-shirts{' '}
+            Pink T-shirts{' '}
           </Text>
           <Text style={{marginLeft: 10, marginTop: 5, color: '#505050'}}>
             ₹2999{' '}
           </Text>
-          <Text style={{marginLeft: 10, marginTop: 5, color: '#505050'}}>
+          <Text
+            style={{
+              marginLeft: 10,
+              marginTop: 5,
+              color: '#505050',
+              fontFamily: 'Arial regular',
+            }}>
             Size: S
           </Text>
-          <Text style={{marginLeft: 10, marginTop: 5, color: '#505050'}}>
+          <Text
+            style={{
+              marginLeft: 10,
+              marginTop: 5,
+              color: '#505050',
+              fontFamily: 'Arial regular',
+            }}>
             Qty: 1
           </Text>
 
@@ -104,21 +116,33 @@ const ProductList = (props) => {
               borderColor: '#707070',
               justifyContent: 'flex-end',
               marginLeft: 93,
-              width: width * 0.25866666666,
+              //width: width * 0.25866666666,
               alignItems: 'center',
               borderRadius: 5,
             }}>
             <TouchableOpacity onPress={() => console.log('Edit Pressed')}>
-              <Text style={{margin: 5, color: '#5E5E5E'}}>Add to Wishlist</Text>
+              <Text
+                style={{margin: 5, color: '#5E5E5E', fontFamily: 'arial-bold'}}
+                numberOfLines={1}>
+                Add to Wishlist
+              </Text>
             </TouchableOpacity>
           </View>
         </View>
       </View>
       <View style={styles.bottomView}>
         <View style={{flexDirection: 'row'}}>
-          <View style={{flexDirection: 'column', justifyContent: 'flex-start'}}>
-            <Text>Total : ₹2999</Text>
-            <Text>INCLUDING GST</Text>
+          <View
+            style={{
+              flexDirection: 'column',
+              justifyContent: 'flex-start',
+            }}>
+            <Text style={{fontFamily: 'arial-bold', fontSize: 14}}>
+              Total : ₹2999
+            </Text>
+            <Text style={{fontFamily: 'arial-bold', fontSize: 14}}>
+              INCLUDING GST
+            </Text>
           </View>
           <View
             style={{
@@ -130,10 +154,16 @@ const ProductList = (props) => {
               alignItems: 'center',
               borderRadius: 5,
               backgroundColor: '#313030',
+              justifyContent: 'center',
             }}>
             <TouchableOpacity
+              style={{
+                justifyContent: 'center',
+                //alignContent: 'center',
+                //alignSelf: 'center',
+              }}
               onPress={() => props.navigation.navigate('Shipment')}>
-              <Text style={{margin: 5, color: '#FEFDF7'}}>Buy</Text>
+              <Text style={{color: '#FEFDF7', textAlign: 'center'}}>BUY</Text>
             </TouchableOpacity>
           </View>
         </View>

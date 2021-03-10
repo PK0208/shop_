@@ -107,12 +107,15 @@ const Payment = (props) => {
 
       <View
         style={{
-          borderWidth: 1,
-          shadowOpacity: 1,
+          borderWidth: 1 / 2,
+          //shadowOpacity: 10,
+          shadowOpacity: 1.0,
           shadowColor: '#00000029',
+          shadowOffset: {width: 0, height: 3},
+          shadowRadius: 5,
           width: width * 0.92,
           marginLeft: width * 0.048,
-          margin: 5,
+          margin: 15,
         }}>
         <Text
           style={{
@@ -120,6 +123,7 @@ const Payment = (props) => {
             fontSize: 14,
             color: '#403D3D',
             fontFamily: 'arial-bold',
+            margin: 5,
           }}>
           Price Details
         </Text>
@@ -130,6 +134,7 @@ const Payment = (props) => {
             borderColor: '#00000029',
             width: '80%',
             marginLeft: 15,
+            marginBottom: 5,
           }}>
           <View style={{flexDirection: 'column'}}>
             <Text style={styles.textLeft}>Total MRP</Text>
@@ -140,6 +145,39 @@ const Payment = (props) => {
             <Text style={styles.textRight}>₹2999</Text>
             <Text style={styles.textRight}>-₹300</Text>
             <Text style={styles.textRight}>₹50</Text>
+          </View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: 'row',
+            borderTopWidth: 1,
+            borderColor: '#00000029',
+            width: '80%',
+            marginLeft: 15,
+          }}>
+          <View style={{flexDirection: 'column'}}>
+            <Text
+              style={{
+                fontFamily: 'arial-bold',
+                color: '#403D3D',
+                fontSize: 14,
+                margin: 3,
+              }}>
+              Total{' '}
+            </Text>
+          </View>
+          <View style={{flexDirection: 'column'}}>
+            <Text
+              style={{
+                marginLeft: width * 0.552,
+                fontFamily: 'arial-bold',
+                color: '#403D3D',
+                fontSize: 14,
+                margin: 3,
+              }}>
+              ₹2999
+            </Text>
           </View>
         </View>
       </View>
@@ -193,24 +231,29 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     //justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 1,
+    borderWidth: 1 / 2,
+    borderColor: '#00000029',
     width: width * 0.92,
     marginLeft: width * 0.04,
     paddingLeft: width * 0.052,
     padding: 5,
+    shadowColor: '#00000029',
+    shadowRadius: 10,
+    shadowOpacity: 1.25,
+    shadowOffset: {width: 0, height: 3},
   },
   textLeft: {
     fontFamily: 'Arial regular',
     color: '#403D3D',
     fontSize: 13,
-    margin: 2,
+    margin: 3,
   },
   textRight: {
     marginLeft: (width * 0.552) / 2,
     fontFamily: 'Arial regular',
     color: '#403D3D',
     fontSize: 13,
-    margin: 2,
+    margin: 3,
   },
 });
 export default Payment;
